@@ -1,0 +1,15 @@
+=== Kafka commands   m
+kafka-topics --describe --bootstrap-server=localhost:9092 --list 
+./kafka-topics --bootstrap-server=localhost:9092 --list
+kafka-topics --create --bootstrap-server=localhost:29092 --replication-factor 1 --partitions 2 --topic test2Topic
+kafka-topics --create --bootstrap-server=localhost:29092 --replication-factor 1 --partitions 1 --topic testTopic
+kafka-console-producer --topic=testTest --bootstrap-server=localhost:29092   
+kafka-console-consumer --topic=testTopic      --bootstrap-server=localhost:29092
+
+kafka-console-consumer --topic testTopic --bootstrap-server=localhost:29092 --from-beginning
+
+docker exec -t -i mycontainer /bin/bash 
+
+curl --location --request POST 'localhost:8080/producer/8765' \
+--header 'Content-Type: application/json' \
+--data-raw '{}'
