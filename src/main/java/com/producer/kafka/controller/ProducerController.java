@@ -28,7 +28,7 @@ public class ProducerController {
     public ResponseEntity<String> sendOneMessage(@PathVariable String id) {
              producer.sendMessage(id);
              return ResponseEntity.status(HttpStatus.OK)
-                     .body("Producer sent message  ") ;
+                     .body("Producer ---> sent message  ") ;
     }
 
 
